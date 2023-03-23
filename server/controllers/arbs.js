@@ -5,7 +5,7 @@ const { fork } = require("child_process")
 const createArb = async (req, res) => {
   console.log(req)
   const main = await import(
-    "../public/put-call-parity/put-call-parity-options-arb/main.mjs"
+    "/public/put-call-parity/put-call-parity-options-arb/main.mjs"
   )
 
   const execArb = await main.findArbs()
