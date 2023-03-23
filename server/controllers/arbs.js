@@ -1,11 +1,10 @@
 // import model/schema to initiate actions
 const Arbs = require("../models/arbs")
-const { fork } = require("child_process")
 
 const createArb = async (req, res) => {
   console.log(req)
   const main = await import(
-    "/public/put-call-parity/put-call-parity-options-arb/main.mjs"
+    "../public/put-call-parity/put-call-parity-options-arb/main.mjs"
   )
 
   const execArb = await main.findArbs()
@@ -19,8 +18,6 @@ const createArb = async (req, res) => {
   // python.stdout.on("data", function (data) {
   //   dataToSend = data.toString()
   // })
-
-  console.log("exec", execArb)
 
   // python.stderr.on("data", (data) => {
   //   console.error(`stderr : ${data}`)

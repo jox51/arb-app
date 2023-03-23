@@ -6,7 +6,6 @@ const { BadRequestError, UnauthenticatedError } = require("../errors")
 
 const register = async (req, res) => {
   const { name, email, password } = req.body.data.user
-  console.log(req.body)
   const user = await User.create({ ...req.body.data.user })
 
   res.status(StatusCodes.CREATED).json({ msg: "User created successfully" })
