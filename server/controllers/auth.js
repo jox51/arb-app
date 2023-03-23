@@ -1,5 +1,3 @@
-const jwt = require("jsonwebtoken")
-const bcrypt = require("bcryptjs")
 const { StatusCodes } = require("http-status-codes")
 const User = require("../models/user")
 const { BadRequestError, UnauthenticatedError } = require("../errors")
